@@ -29,23 +29,23 @@ function fly(robot) {
         bot.drone.left(0.35);
     });
 
-    after(6.2 * 1000, function () {
+    after(3 * 1000, function () {
         bot.drone.stop();
-        right(maxSpeed)
+        bot.drone.right(maxSpeed)
     });
-    after(9.8 * 1000, function() {
+    after(4.35 * 1000, function() {
         bot.drone.stop();
         bot.drone.back(maxSpeed);
         bot.drone.left(0.35);
 
     });
-    after(15 * 1000, function() {
+    after(6.35 * 1000, function() {
         bot.drone.down(1)
     });
-    after(16 * 1000, function(){
+    after(7.35 * 1000, function(){
         bot.drone.land()
     });
-    after(17 * 1000, function () {
+    after(8.35 * 1000, function () {
         bot.drone.stop();
 
     });
