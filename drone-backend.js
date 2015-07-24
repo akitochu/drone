@@ -39,13 +39,13 @@ function fly(robot) {
         bot.drone.right(1.5);
 
     });
-    after(9.35 * 1000, function() {
+    after(8.5 * 1000, function() {
         bot.drone.down(0.7)
     });
-    after(10.35 * 1000, function(){
+    after(9.5 * 1000, function(){
         bot.drone.land()
     });
-    after(11.35 * 1000, function () {
+    after(10.5 * 1000, function () {
         bot.drone.stop();
 
     });
