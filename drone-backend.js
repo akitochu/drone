@@ -30,11 +30,11 @@ function fly(robot) {
     });
 
     after(5 * 1000, function () {
-        bot.drone.stop();
+        bot.drone.hover();
         bot.drone.left(maxSpeed)
     });
     after(7.35 * 1000, function() {
-        bot.drone.stop();
+        bot.drone.hover();
         bot.drone.back(maxSpeed);
         bot.drone.right(2.5);
 
