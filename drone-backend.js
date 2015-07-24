@@ -23,41 +23,29 @@ function fly(robot) {
     bot.drone.disableEmergency();
     bot.drone.ftrim();
     bot.drone.takeoff();
-    front(maxSpeed);
-    left(0.43);
-    up(0.1);
+    bot.drone.front(maxSpeed);
+    bot.drone.left(0.35);
+    bot.drone.up(0.3);
 
-    after(5.2 * 1000, function () {
-        left(0);
-        front(0);
-        up(0);
+    after(4 * 1000, function () {
+        bot.drone.stop();
         right(maxSpeed)
     });
-    after(3.6 * 1000, function() {
-        right(0);
-        back(maxSpeed);
-        left(0.43);
-        down(0.1)
+    after(7 * 1000, function() {
+        bot.drone.stop();
+        bot.drone.back(maxSpeed);
+        bot.drone.left(0.35);
+        bot.drone.down(0.3)
     });
-    after(5.2 * 1000, function(){
+    after(11 * 1000, function(){
         bot.drone.land()
     });
-    afterfter(7.5 * 1000, function () {
+    after(15 * 1000, function () {
         bot.drone.stop();
 
     });
-    bot.nav.on("navdata", function (data) {
-        console.log(data);
-    });
-    bot.nav.on("batteryChange", function(data) {
-        console.log("Battery level:", data);
-    });
-    bot.nav.on("altitudeChange", function(data) {
-        console.log("Altitude:", data);
-        if (altitude > 1.5) {
-            bot.drone.land();
-        }
-    });
+
+
 
 }
 
