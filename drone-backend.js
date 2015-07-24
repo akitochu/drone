@@ -26,7 +26,7 @@ function fly(robot) {
     bot.drone.up(0.7);
     after(3 * 1000, function() {
         bot.drone.front(maxSpeed);
-        bot.drone.right(2.5);
+        bot.drone.right(1.5);
     });
 
     after(5 * 1000, function () {
@@ -36,7 +36,7 @@ function fly(robot) {
     after(7.35 * 1000, function() {
         bot.drone.hover();
         bot.drone.back(maxSpeed);
-        bot.drone.right(2.5);
+        bot.drone.right(1.5);
 
     });
     after(9.35 * 1000, function() {
